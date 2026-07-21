@@ -1,0 +1,64 @@
+Project Abstract
+
+Title: Lead Management System for a Software Development Institution
+
+Objective
+
+Develop a full-stack Lead Management System to manage student enquiries
+from different sources. The project will begin with CRUD operations and
+later be enhanced with authentication and advanced CRM features.
+
+Tech Stack
+
+Frontend: - React - React Router - Axios - Bootstrap
+
+Backend: - Python - Django - Django REST Framework
+
+Database: - PostgreSQL
+
+Tools: - Postman - Git & GitHub
+
+Models
+
+Lead - id - name - email - phone - course - source - status - remarks -
+created_at
+
+Status Choices - New - Contacted - Interested - Not Interested - Joined
+
+Source Choices - Instagram - Facebook - Website - WhatsApp - Walk-in -
+Referral - Call
+
+Features - Phase 1
+
+-   Add Lead
+-   View All Leads
+-   View Single Lead
+-   Update Lead
+-   Delete Lead
+-   Form Validation
+-   REST API Integration
+-   React Routing
+-   Axios API Calls
+
+Features - Phase 2
+
+-   JWT Authentication
+-   Login / Logout
+-   Protected Routes
+-   Search
+-   Filter
+-   Pagination
+-   Dashboard Statistics
+-   Follow-up Notes
+-   Assign Leads
+-   Export Data
+-   Role-based Permissions
+
+Deliverables
+
+-   Django REST API
+-   React Frontend
+-   PostgreSQL Database
+-   Postman Collection
+-   GitHub Repository
+-   API Documentation

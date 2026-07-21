@@ -1,0 +1,42 @@
+Lead Management API Documentation
+
+Base URL: http://127.0.0.1:8000/api/
+
+Lead Fields
+
+-   id
+-   name
+-   email
+-   phone
+-   course
+-   source
+-   status
+-   remarks
+-   created_at
+
+Status: New, Contacted, Interested, Not Interested, Joined Source:
+Instagram, Facebook, Website, WhatsApp, Walk-in, Referral, Call
+
+Endpoints
+
+POST /api/leads/ GET /api/leads/ GET /api/leads/{id}/ PUT
+/api/leads/{id}/ PATCH /api/leads/{id}/ DELETE /api/leads/{id}/
+
+Sample Create Request
+
+    {
+     "name":"Rahul",
+     "email":"rahul@gmail.com",
+     "phone":"9876543210",
+     "course":"Python Django",
+     "source":"Instagram",
+     "status":"New",
+     "remarks":"Interested in weekend batch"
+    }
+
+Validation: - Name required - Valid email - Unique phone
+
+React Pages: - Dashboard - Lead List - Add Lead - Edit Lead - View Lead
+
+Phase 2: JWT, Protected Routes, Axios Interceptors, Search, Filter,
+Pagination, Dashboard, Assign Leads, Follow-ups, Notes, Export, Roles.
