@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function LeadAdd() {
+
+   let [lead,setLead]=useState({name:"",email:"",phone:"",course:"",status:"",source:"",remarks:""})
+
+    function handleSubmit(event){
+        event.preventDefault()
+        console.log(lead);
+        
+    }
 
     const COURSE_CHOICES = [
         "Django",
@@ -35,23 +43,31 @@ function LeadAdd() {
 
     return (
         <div>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="">name</label>
-                    <input type="text" placeholder='enter name' />
+                    <input 
+                    onChange={e=>setLead({...lead,name:e.target.value})}
+                    type="text" placeholder='enter name' />
                 </div>
 
                 <div>
                     <label htmlFor="">Email</label>
-                    <input type="email" placeholder='enter email' />
+                    <input
+                    onChange={e=>setLead({...lead,email:e.target.value})}
+                    type="email" placeholder='enter email' />
                 </div>
                 <div>
                     <label htmlFor="">phone</label>
-                    <input type="text" placeholder='enter phone number' />
+                    <input type="text" 
+                    onChange={e=>setLead({...lead,phone:e.target.value})}
+                    placeholder='enter phone number' />
                 </div>
                 <div>
                     <label htmlFor="">Select course</label>
-                    <select name="" id="">
+                    <select name="" id="" 
+                    onChange={e=>setLead({...lead,course:e.target.value})}
+                    >
                         {COURSE_CHOICES.map((c) => (
                             <option value={c}>{c}</option>
                         ))}
@@ -61,7 +77,9 @@ function LeadAdd() {
 
                 <div>
                     <label htmlFor="">Select status</label>
-                    <select name="" id="">
+                    <select name=""
+                    onChange={e=>setLead({...lead,status:e.target.value})}
+                    id="">
                         {STATUS_CHOICES.map((s) => (
                             <option value={s}>{s}</option>
                         ))}
@@ -70,7 +88,9 @@ function LeadAdd() {
 
                 <div>
                     <label htmlFor="">select source</label>
-                    <select name="" id="">
+                    <select name=""
+                    onChange={e=>setLead({...lead,source:e.target.value})}
+                    id="">
                         {SOURCE_CHOICES.map((s)=>(
                             <option value={s}>{s}</option>
                         ))}
@@ -80,11 +100,13 @@ function LeadAdd() {
 
                 <div>
                     <label htmlFor="">remarks</label>
-                    <textarea name="" id=""></textarea>
+                    <textarea
+                    onChange={e=>setLead({...lead,remarks:e.target.value})}
+                    name="" id=""></textarea>
                 </div>
 
                 <div>
-                    <button>Sumbmit</button>
+                    <button type='submit'>Sumbmit</button>
                 </div>
 
             </form>
