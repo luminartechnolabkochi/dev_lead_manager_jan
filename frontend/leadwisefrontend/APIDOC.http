@@ -1,0 +1,49 @@
+# api call for listing all leads
+###
+GET http://127.0.0.1:8000/api/leads/
+Accept: application/json
+
+#api call for adding a new lead
+###
+POST http://127.0.0.1:8000/api/leads/
+Content-Type: application/json
+
+{
+    "name":"vipin",
+    "email":"vipin12@gmail.com",
+    "phone":"9789098974",
+    "course":"Django",
+    "status":"New",
+    "source":"Website",
+    "remarks":"looks interested followup"
+    
+}
+
+
+#api call for fetchig lead detail
+###
+GET http://127.0.0.1:8000/api/leads/1/
+Accept: application/json
+
+#api call for updating lead
+###
+PUT http://127.0.0.1:8000/api/leads/1/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "hari",
+  "email": "hari12@gmail.com",
+  "phone": "9789098976",
+  "course": "Django",
+  "source": "Referral",
+  "status": "Contacted",
+  "remarks": "looks interested followup",
+  "created_at": "2026-07-21T04:48:03.197813Z",
+  "updated_at": "2026-07-21T04:48:03.197827Z"
+}
+
+#api call for deleting lead
+###
+DELETE http://127.0.0.1:8000/api/leads/1/
+Accept: application/json
