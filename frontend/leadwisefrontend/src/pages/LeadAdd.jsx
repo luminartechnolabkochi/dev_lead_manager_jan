@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 
 function LeadAdd() {
@@ -6,15 +7,35 @@ function LeadAdd() {
 
     function handleSubmit(event){
         event.preventDefault()
-        console.log(lead);
+        // console.log(lead);
+        leadAddApi()
         
     }
 
+    async function leadAddApi(){
+
+        let url = "http://127.0.0.1:8000/api/leads/"
+        let payLoad=lead
+        let headers = {
+
+            "Content-Type":"application/json"
+        }
+
+        let response = await axios.post(url,payLoad,{headers})
+        
+        console.log(response);
+        
+    }
+
+
+
+
+
     const COURSE_CHOICES = [
         "Django",
-        "MEARN_STACK",
+        "MEARN-STACK",
         "JAVA",
-        "SOFTWARE_TESTING",
+        "SOFTWARE-TESTING",
         "ASP.net",
         "DATASCIENCE",
         "DIGITAL-MARKETING",

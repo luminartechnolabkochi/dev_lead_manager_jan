@@ -9,9 +9,9 @@ POST http://127.0.0.1:8000/api/leads/
 Content-Type: application/json
 
 {
-    "name":"vipin",
-    "email":"vipin12@gmail.com",
-    "phone":"9789098974",
+    "name":"jibin",
+    "email":"jibin@gmail.com",
+    "phone":"9789098975",
     "course":"Django",
     "status":"New",
     "source":"Website",
